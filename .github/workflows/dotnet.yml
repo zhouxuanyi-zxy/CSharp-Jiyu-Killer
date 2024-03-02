@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -28,12 +28,14 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: ls
       run: ls
-    - name: ls Build dir
-      run: ls /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/
-    - name: Upload-artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: CSharp-Jiyu-Killer.exe
-        path: /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/CSharp-Jiyu-Killer
-      # Use always() to always run this step to publish test results when there are test failures
-      if: ${{ always() }}
+    - name: pwd
+      run: pwd
+    # - name: ls Build dir
+    #   run: ls /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/
+    # - name: Upload-artifact
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: CSharp-Jiyu-Killer.exe
+    #     path: /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/CSharp-Jiyu-Killer
+    #   # Use always() to always run this step to publish test results when there are test failures
+    #   if: ${{ always() }}
