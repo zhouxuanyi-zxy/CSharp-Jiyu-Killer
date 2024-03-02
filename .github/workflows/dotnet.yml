@@ -29,7 +29,7 @@ jobs:
     - name: Upload-artifact
       uses: actions/upload-artifact@v4
       with:
-        name: dotnet-results-${{ matrix.dotnet-version }}
-        path: TestResults-${{ matrix.dotnet-version }}
+        name: CSharp-Jiyu-Killer.exe
+        path: /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/CSharp-Jiyu-Killer.exe
       # Use always() to always run this step to publish test results when there are test failures
       if: ${{ always() }}
