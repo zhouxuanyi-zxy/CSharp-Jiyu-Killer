@@ -30,12 +30,12 @@ jobs:
       run: ls
     - name: pwd
       run: pwd
-    # - name: ls Build dir
-    #   run: ls /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/
-    # - name: Upload-artifact
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: CSharp-Jiyu-Killer.exe
-    #     path: /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/CSharp-Jiyu-Killer
-    #   # Use always() to always run this step to publish test results when there are test failures
+    - name: ls Build dir
+      run: ls D:\a\CSharp-Jiyu-Killer\CSharp-Jiyu-Killer\CSharp-Jiyu-Killer\bin\Debug\net8.0\
+    - name: Upload-artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: CSharp-Jiyu-Killer
+        path: D:\a\CSharp-Jiyu-Killer\CSharp-Jiyu-Killer\CSharp-Jiyu-Killer\bin\Debug\net8.0\*
+      # Use always() to always run this step to publish test results when there are test failures
     #   if: ${{ always() }}
