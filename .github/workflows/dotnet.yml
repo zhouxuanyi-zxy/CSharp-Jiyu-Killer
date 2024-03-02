@@ -26,6 +26,10 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: ls
+      run: ls
+    - name: ls Build dir
+      run: ls /home/runner/work/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/CSharp-Jiyu-Killer/bin/Debug/net8.0/
     - name: Upload-artifact
       uses: actions/upload-artifact@v4
       with:
